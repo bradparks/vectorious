@@ -32,8 +32,32 @@
 
 <p>Vectorious is a generalized n-dimensional matrix and vector library written in JavaScript, which can be used both in node.js and the browser.</p>
 
+<ul>
+<li>
+<a href="#installation-">Installation</a>
+
+<ul>
+<li><a href="#for-the-browser-">For the browser</a></li>
+</ul>
+</li>
+<li><a href="#extensions-">Extensions</a></li>
+<li><a href="#usage-">Usage</a></li>
+<li><a href="#vector-">Vector</a></li>
+<li><a href="#matrix-">Matrix</a></li>
+<li>
+<a href="#benchmarks-">Benchmarks</a>
+
+<ul>
+<li><a href="#200">2.0.0</a></li>
+<li><a href="#210">2.1.0</a></li>
+<li><a href="#220">2.2.0</a></li>
+</ul>
+</li>
+</ul>
+
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation-" class="anchor" href="#installation-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation <a href="#vectorious">↑</a>
+</h2>
 
 <p>Install with <code>npm</code></p>
 
@@ -48,7 +72,8 @@
 <div class="highlight highlight-bash"><pre>$ npm run benchmark</pre></div>
 
 <h4>
-<a id="for-the-browser" class="anchor" href="#for-the-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>For the browser</h4>
+<a id="for-the-browser-" class="anchor" href="#for-the-browser-" aria-hidden="true"><span class="octicon octicon-link"></span></a>For the browser <a href="#vectorious">↑</a>
+</h4>
 
 <p>Download a <a href="https://github.com/mateogianolio/vectorious/releases">release</a> and use it like this:</p>
 
@@ -58,7 +83,8 @@
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h2>
-<a id="extensions" class="anchor" href="#extensions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extensions</h2>
+<a id="extensions-" class="anchor" href="#extensions-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extensions <a href="#vectorious">↑</a>
+</h2>
 
 <ul>
 <li>
@@ -70,9 +96,12 @@
 </ul>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage-" class="anchor" href="#usage-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage <a href="#vectorious">↑</a>
+</h2>
 
-<p>The constructors of both <code>Matrix</code> and <code>Vector</code> are designed to be flexible, so they can be initialized using several different arguments. Since 2.1.0 <code>Vector</code> implements <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> for increased performance. The default <code>Vector</code> type is <code>Float64Array</code>, but this can be specified upon creation.</p>
+<p>The constructors of both <code>Matrix</code> and <code>Vector</code> are designed to be flexible, so they can be initialized using several different arguments.</p>
+
+<p>Since <a href="https://github.com/mateogianolio/vectorious/releases/tag/2.1.0">2.1.0</a> <code>Vector</code> implements <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a> for increased performance. The default <code>Vector</code> type is <code>Float64Array</code>, but this can be specified upon creation.</p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> vectorious <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>vectorious<span class="pl-pds">'</span></span>),
     Vector <span class="pl-k">=</span> vectorious.Vector,
@@ -159,7 +188,8 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 <p>For more advanced uses, check out the extensions <a href="https://github.com/mateogianolio/vectorious-solve">solve</a> and <a href="https://github.com/mateogianolio/vectorious-plot">plot</a>.</p>
 
 <h2>
-<a id="vector" class="anchor" href="#vector" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vector</h2>
+<a id="vector-" class="anchor" href="#vector-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vector <a href="#vectorious">↑</a>
+</h2>
 
 <p>The following vector operations and methods are implemented in <code>vector.js</code>.</p>
 
@@ -287,14 +317,14 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 
 <p id="vector_min"></p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Vector, Number) =&gt; (Number)</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Vector) =&gt; (Number)</span>
 <span class="pl-c1">Vector</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">min</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
 
 <p>Get the minimum value of a vector.</p>
 
 <p id="vector_max"></p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Vector, Number) =&gt; (Number)</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Vector) =&gt; (Number)</span>
 <span class="pl-c1">Vector</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">max</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
 
 <p>Get the maximum value of a vector.</p>
@@ -350,7 +380,8 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 <p>Convert vector to array.</p>
 
 <h2>
-<a id="matrix" class="anchor" href="#matrix" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matrix</h2>
+<a id="matrix-" class="anchor" href="#matrix-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Matrix <a href="#vectorious">↑</a>
+</h2>
 
 <p>The following matrix operations and methods are implemented in <code>matrix.js</code>.</p>
 
@@ -362,10 +393,14 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 <li><a href="#matrix_transpose"><code>transpose</code></a></li>
 <li><a href="#matrix_inverse"><code>inverse</code></a></li>
 <li><a href="#matrix_gauss"><code>gauss</code></a></li>
+<li><a href="#matrix_pivotize"><code>pivotize</code></a></li>
+<li><a href="#matrix_lu"><code>lu</code></a></li>
 <li><a href="#matrix_diag"><code>diag</code></a></li>
 <li><a href="#matrix_augment"><code>augment</code></a></li>
 <li><a href="#matrix_trace"><code>trace</code></a></li>
+<li><a href="#matrix_determinant"><code>determinant</code></a></li>
 <li><a href="#matrix_identity"><code>identity</code></a></li>
+<li><a href="#matrix_magic"><code>magic</code></a></li>
 <li><a href="#matrix_zeros"><code>zeros</code></a></li>
 <li><a href="#matrix_ones"><code>ones</code></a></li>
 <li><a href="#matrix_equals"><code>equals</code></a></li>
@@ -423,6 +458,20 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 
 <p>Convert a matrix to <a href="http://en.wikipedia.org/wiki/Row_echelon_form#Reduced_row_echelon_form">reduced row echelon (RREF)</a> form using <a href="http://en.wikipedia.org/wiki/Gaussian_elimination">Gauss-Jordan eliminiation</a>.</p>
 
+<p id="matrix_pivotize"></p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Matrix) =&gt; ([Matrix, Number])</span>
+<span class="pl-c1">Matrix</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">pivotize</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
+
+<p>Get the pivot permutation matrix <code>P</code> and corresponding determinant <code>sign</code> in the form of the array <code>[P, sign]</code> (used in <a href="http://en.wikipedia.org/wiki/LU_decomposition">LU factorization</a>).</p>
+
+<p id="matrix_lu"></p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Matrix) =&gt; ([Matrix, Matrix, [Matrix, Number]])</span>
+<span class="pl-c1">Matrix</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">lu</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
+
+<p>Get the <a href="http://en.wikipedia.org/wiki/LU_decomposition">LU factorization</a> of a matrix in the form of the array  <code>[L, U, P]</code>, where <code>P</code> is the return value of <a href="#matrix_pivotize"><code>pivotize()</code></a>.</p>
+
 <p id="matrix_inverse"></p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-c">// (Matrix) =&gt; (Matrix)</span>
@@ -452,12 +501,26 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 
 <p>Get <a href="http://en.wikipedia.org/wiki/Trace_(linear_algebra)">matrix trace</a> (the sum of the diagonal).</p>
 
+<p id="matrix_determinant"></p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Matrix) =&gt; (Number)</span>
+<span class="pl-c1">Matrix</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">determinant</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
+
+<p>Get <a href="http://en.wikipedia.org/wiki/Determinant">matrix determinant</a> (<em>note:</em> inefficient for large matrices).</p>
+
 <p id="matrix_identity"></p>
 
 <div class="highlight highlight-javascript"><pre><span class="pl-c">// (Number) =&gt; (Matrix)</span>
 <span class="pl-c1">Matrix</span>.<span class="pl-en">identity</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">size</span>, [<span class="pl-smi">type</span>])</pre></div>
 
-<p>Create an <a href="http://en.wikipedia.org/wiki/Identity_matrix">identity matrix</a>. <code>type</code> is optional and specifies the type of <code>TypedArray</code> used in computations.</p>
+<p>Create a <code>size x size</code> <a href="http://en.wikipedia.org/wiki/Identity_matrix">identity matrix</a>. <code>type</code> is optional and specifies the type of <code>TypedArray</code> used in computations.</p>
+
+<p id="matrix_magic"></p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-c">// (Number) =&gt; (Matrix)</span>
+<span class="pl-c1">Matrix</span>.<span class="pl-en">magic</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">size</span>, [<span class="pl-smi">type</span>])</pre></div>
+
+<p>Create a <code>size x size</code> <a href="http://en.wikipedia.org/wiki/Magic_square">magic square matrix</a>. <code>type</code> is optional and specifies the type of <code>TypedArray</code> used in computations.</p>
 
 <p id="matrix_zeros"></p>
 
@@ -529,6 +592,131 @@ matrix <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl
 <span class="pl-c1">Matrix</span>.<span class="pl-c1">prototype</span>.<span class="pl-en">toArray</span> <span class="pl-k">=</span> <span class="pl-k">function</span>()</pre></div>
 
 <p>Convert matrix to array.</p>
+
+<h2>
+<a id="benchmarks-" class="anchor" href="#benchmarks-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Benchmarks <a href="#vectorious">↑</a>
+</h2>
+
+<h4>
+<a id="200" class="anchor" href="#200" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/mateogianolio/vectorious/releases/tag/2.0.0">2.0.0</a>
+</h4>
+
+<pre><code>$ node ./benchmarks/vector.js &amp;&amp; node ./benchmarks/matrix.js
+
+a = Vector.ones(1024)
+b = Vector.ones(1024).scale(2)
+
+Vector.zeros(1024) x 27,400 ops/sec ±0.47% (94 runs sampled)
+Vector.ones(1024) x 26,838 ops/sec ±0.45% (98 runs sampled)
+Vector.range(0, 1024) x 32,830 ops/sec ±0.74% (95 runs sampled)
+Vector.combine(a, b) x 27,724 ops/sec ±0.36% (99 runs sampled)
+a.add(b) x 53,644 ops/sec ±0.41% (100 runs sampled)
+a.subtract(b) x 53,582 ops/sec ±0.39% (100 runs sampled)
+a.scale(Math.random()) x 10,452 ops/sec ±0.53% (99 runs sampled)
+a.normalize() x 5,212 ops/sec ±0.54% (99 runs sampled)
+a.dot(b) x 361,011 ops/sec ±0.42% (101 runs sampled)
+a.magnitude() x 420,937 ops/sec ±0.44% (101 runs sampled)
+a.angle(b) x 132,931 ops/sec ±0.34% (97 runs sampled)
+a.project(b) x 5,661 ops/sec ±0.35% (95 runs sampled)
+
+a = Matrix.ones(128, 128)
+b = Matrix.ones(128, 128).scale(2)
+
+Matrix.identity(128) x 1,454 ops/sec ±1.84% (92 runs sampled)
+Matrix.zeros(128, 128) x 1,482 ops/sec ±2.08% (92 runs sampled)
+Matrix.ones(128, 128) x 1,581 ops/sec ±1.15% (96 runs sampled)
+Matrix.augment(a, b) x 1,561 ops/sec ±1.32% (96 runs sampled)
+a.add(b) x 3,238 ops/sec ±1.10% (97 runs sampled)
+a.subtract(b) x 3,224 ops/sec ±1.31% (97 runs sampled)
+a.scale(Math.random()) x 586 ops/sec ±1.09% (92 runs sampled)
+a.multiply(b) x 25.22 ops/sec ±1.65% (46 runs sampled)
+a.transpose() x 817 ops/sec ±2.54% (89 runs sampled)
+a.gauss() x 174 ops/sec ±4.27% (65 runs sampled)
+a.diag() x 18,717 ops/sec ±2.20% (88 runs sampled)
+a.trace() x 19,097 ops/sec ±1.28% (96 runs sampled)
+</code></pre>
+
+<h4>
+<a id="210" class="anchor" href="#210" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/mateogianolio/vectorious/releases/tag/2.1.0">2.1.0</a>
+</h4>
+
+<pre><code>$ node ./benchmarks/vector.js &amp;&amp; node ./benchmarks/matrix.js
+
+a = Vector.ones(1024)
+b = Vector.ones(1024).scale(2)
+
+Vector.zeros(1024) x 138,658 ops/sec ±4.84% (67 runs sampled)
+Vector.ones(1024) x 140,214 ops/sec ±4.75% (66 runs sampled)
+Vector.range(0, 1024) x 37,543 ops/sec ±4.80% (81 runs sampled)
+Vector.combine(a, b) x 6,120 ops/sec ±2.94% (91 runs sampled)
+a.add(b) x 93,725 ops/sec ±7.82% (68 runs sampled)
+a.subtract(b) x 95,672 ops/sec ±7.67% (70 runs sampled)
+a.scale(Math.random()) x 99,214 ops/sec ±7.74% (72 runs sampled)
+a.normalize() x 84,459 ops/sec ±7.32% (72 runs sampled)
+a.dot(b) x 501,345 ops/sec ±0.43% (98 runs sampled)
+a.magnitude() x 623,274 ops/sec ±0.56% (94 runs sampled)
+a.angle(b) x 191,828 ops/sec ±0.52% (92 runs sampled)
+a.project(b) x 73,958 ops/sec ±6.82% (79 runs sampled)
+
+a = Matrix.ones(128, 128)
+b = Matrix.ones(128, 128).scale(2)
+
+Matrix.identity(128) x 4,042 ops/sec ±5.32% (76 runs sampled)
+Matrix.zeros(128, 128) x 4,573 ops/sec ±7.11% (79 runs sampled)
+Matrix.ones(128, 128) x 5,480 ops/sec ±2.36% (81 runs sampled)
+Matrix.augment(a, b) x 292 ops/sec ±5.06% (78 runs sampled)
+a.add(b) x 3,688 ops/sec ±9.16% (68 runs sampled)
+a.subtract(b) x 4,299 ops/sec ±4.08% (75 runs sampled)
+a.scale(Math.random()) x 4,529 ops/sec ±3.01% (75 runs sampled)
+a.multiply(b) x 28.85 ops/sec ±0.80% (52 runs sampled)
+a.transpose() x 2,255 ops/sec ±5.07% (78 runs sampled)
+a.gauss() x 374 ops/sec ±3.55% (86 runs sampled)
+a.diag() x 893 ops/sec ±2.11% (93 runs sampled)
+a.trace() x 907 ops/sec ±1.63% (95 runs sampled)
+</code></pre>
+
+<h4>
+<a id="220" class="anchor" href="#220" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/mateogianolio/vectorious/releases/tag/2.2.0">2.2.0</a>
+</h4>
+
+<pre><code>$ npm run benchmark
+
+&gt; vectorious@2.2.0 benchmark /path/to/vectorious
+&gt; node ./benchmarks/vector.js &amp;&amp; node ./benchmarks/matrix.js
+
+a = Vector.ones(1024)
+b = Vector.ones(1024).scale(2)
+
+Vector.zeros(1024) x 135,355 ops/sec ±5.22% (68 runs sampled)
+Vector.ones(1024) x 146,065 ops/sec ±5.23% (72 runs sampled)
+Vector.range(0, 1024) x 41,358 ops/sec ±3.29% (90 runs sampled)
+Vector.combine(a, b) x 6,369 ops/sec ±2.79% (90 runs sampled)
+a.add(b) x 95,535 ops/sec ±7.24% (69 runs sampled)
+a.subtract(b) x 96,199 ops/sec ±7.31% (72 runs sampled)
+a.scale(Math.random()) x 100,021 ops/sec ±7.21% (68 runs sampled)
+a.normalize() x 85,098 ops/sec ±7.00% (73 runs sampled)
+a.dot(b) x 505,057 ops/sec ±0.38% (99 runs sampled)
+a.magnitude() x 627,442 ops/sec ±0.42% (94 runs sampled)
+a.angle(b) x 193,797 ops/sec ±0.36% (93 runs sampled)
+a.project(b) x 73,280 ops/sec ±6.85% (73 runs sampled)
+
+a = Matrix.ones(128, 128)
+b = Matrix.ones(128, 128).scale(2)
+
+Matrix.identity(128) x 4,806 ops/sec ±2.37% (86 runs sampled)
+Matrix.magic(128) x 1,161 ops/sec ±5.96% (61 runs sampled)
+Matrix.zeros(128, 128) x 5,406 ops/sec ±2.15% (77 runs sampled)
+Matrix.ones(128, 128) x 5,495 ops/sec ±2.54% (67 runs sampled)
+Matrix.augment(a, b) x 288 ops/sec ±7.03% (75 runs sampled)
+a.add(b) x 4,512 ops/sec ±3.26% (78 runs sampled)
+a.subtract(b) x 4,539 ops/sec ±3.09% (79 runs sampled)
+a.scale(Math.random()) x 4,681 ops/sec ±3.29% (78 runs sampled)
+a.multiply(b) x 30.17 ops/sec ±1.01% (54 runs sampled)
+a.transpose() x 2,455 ops/sec ±3.29% (83 runs sampled)
+a.gauss() x 396 ops/sec ±2.72% (89 runs sampled)
+a.diag() x 945 ops/sec ±1.66% (89 runs sampled)
+a.trace() x 940 ops/sec ±1.74% (94 runs sampled)
+</code></pre>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/mateogianolio">mateogianolio</a></p>
